@@ -1,0 +1,40 @@
+body {
+  background-image: url("./assets/img/bg_default.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.root_box {
+  height: 600px;
+}
+.left_box {
+  color: #fff;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.right_box {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: rgba(0, 0, 0, 0.8);
+}
+.left_box img {
+  width: 100px;
+}
+.box_header {
+  color: grey;
+  font-size: 12px;
+  font-weight: bold;
+}
+.child_box {
+  height: 200px;
+  border-radius: 20px;
+  text-align: center;
+}
+.box_content {
+  text-align: center;
+}
+.icon {
+  font-size: 48px;
+}
