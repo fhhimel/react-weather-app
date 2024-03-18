@@ -17,11 +17,7 @@ const App = () => {
   const fetchWeather = (lat, lon) => {
     axios
       .get(
-        `${
-          import.meta.env.VITE_API_URL
-        }/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${
-          import.meta.env.VITE_API_KEY
-        }&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e45e8dbbee9621bb56de6692b2fee404&units=metric`
       )
       .then((response) => {
         setWeather(response.data);
@@ -30,11 +26,7 @@ const App = () => {
   const fetchAirData = (lat, lon) => {
     axios
       .get(
-        `${
-          import.meta.env.VITE_API_URL
-        }/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${
-          import.meta.env.VITE_API_KEY
-        }`
+        `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=e45e8dbbee9621bb56de6692b2fee404`
       )
       .then((response) => {
         setAir(response.data);
@@ -74,9 +66,7 @@ const App = () => {
   const fetchLocationByCity = () => {
     axios
       .get(
-        `${import.meta.env.VITE_API_URL}/geo/1.0/direct?q=${city}&appid=${
-          import.meta.env.VITE_API_KEY
-        }`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=e45e8dbbee9621bb56de6692b2fee404`
       )
       .then((response) => {
         fetchWeather(response.data[0].lat, response.data[0].lon);
