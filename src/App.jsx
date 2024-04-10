@@ -57,10 +57,8 @@ const App = () => {
   };
 
   const fetchCurrentLocation = () => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      fetchWeather(position.coords.latitude, position.coords.longitude);
-      fetchAirData(position.coords.latitude, position.coords.longitude);
-    });
+    fetchWeather(23.815786, 90.355968);
+    fetchAirData(23.815786, 90.355968);
   };
 
   const fetchLocationByCity = () => {
